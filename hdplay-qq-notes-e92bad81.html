@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看球随记 · NBA直播指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f9fc;
+            color: #1a2a36;
+            line-height: 1.7;
+            padding: 0 16px;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 0 60px;
+        }
+
+        /* 网格背景 + 卡片感 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 28px 24px;
+            box-shadow: 0 4px 12px rgba(0, 60, 70, 0.06);
+            border: 1px solid #dbeaf0;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 100, 110, 0.10);
+        }
+
+        /* 蓝绿色点缀 */
+        .accent {
+            color: #1e7e8c;
+        }
+
+        .accent-bg-light {
+            background: #e0f2f5;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1e7e8c;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            padding: 4px 12px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            color: #0a2a30;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #0d3740;
+            margin-bottom: 16px;
+            border-left: 4px solid #1e7e8c;
+            padding-left: 14px;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #2b4d56;
+            margin-bottom: 24px;
+            border-bottom: 1px dashed #c5dde3;
+            padding-bottom: 18px;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+        .quote-note {
+            background: #eef6f9;
+            padding: 18px 20px;
+            border-radius: 18px;
+            margin: 28px 0 12px;
+            border-left: 5px solid #1e7e8c;
+            font-style: normal;
+            color: #1f4150;
+        }
+
+        .quote-note strong {
+            color: #0d5b66;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #0d4450;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .faq-q:before {
+            content: "▹";
+            color: #1e7e8c;
+            font-size: 1.1rem;
+        }
+
+        .faq-a {
+            padding-left: 22px;
+            color: #2b4e5a;
+        }
+
+        .visit-line {
+            background: #1e7e8c;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+            margin: 36px 0 16px;
+            transition: background 0.2s;
+        }
+
+        .visit-line a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255,255,255,0.4);
+        }
+
+        .visit-line a:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .small-meta {
+            font-size: 0.8rem;
+            color: #5e7d88;
+            margin-top: 24px;
+            text-align: right;
+            border-top: 1px solid #d6e6ec;
+            padding-top: 18px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #d0e1e8;
+            margin: 18px 0;
+        }
+
+        /* 移动端友好 */
+        @media (max-width: 600px) {
+            body {
+                padding: 0 12px;
+            }
+            .page {
+                padding: 24px 0 48px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 20px 16px;
+            }
+            .visit-line {
+                font-size: 1rem;
+                padding: 14px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="card-grid">
+
+        <!-- 标题区 / hero 极简 -->
+        <div class="card">
+            <span class="badge">简明指南 · 2025</span>
+            <h1>看 NBA 直播<br>从哪里开始？</h1>
+            <p class="lead">一场球赛，一块屏幕，一个靠谱的指向。花几分钟理清思路，比反复切换链接更省心。</p>
+        </div>
+
+        <!-- 正文多段 第一部分 -->
+        <div class="card">
+            <h2>为什么需要一篇指南</h2>
+            <p>赛季漫长，场次密集。很多时候我们打开手机想找一场比赛，却在搜索和广告里绕了好几分钟。其实只需要一个稳定的入口，记住它的位置，就能省下每晚的犹豫时间。</p>
+            <p>过去两个赛季我一直在用同一个习惯：赛前十分钟，直接去一个固定的网站，搜队名或时间，点进去就是直播。不用注册，不用反复对比。后来我把它记在了备忘录里，就是 <a href="https://hdplay-qq.com">NBA直播</a> 这个地址。它不像一个复杂的平台，更像一个安静的通道。</p>
+            <div class="quote-note">
+                <strong>一点提醒：</strong> 链接不会永远不变，但习惯可以。如果你觉得某个渠道顺手，不妨把它收藏起来，开赛前点一下就好。
+            </div>
+        </div>
+
+        <!-- 第二部分 特点+场景 -->
+        <div class="card">
+            <h2>怎样算“好用”的直播页</h2>
+            <p>我的标准就三条：<span class="accent">加载快、画质稳定、不弹窗。</span> 赛季后半段每场都很关键，谁也不想在关键时刻卡顿或跳转到无关页面。之前试过几个聚合站，总是需要点两次才能看到内容，后来索性只用一个。</p>
+            <p>现在常用的方式很轻：打开浏览器，直接输入 <a href="https://hdplay-qq.com">NBA直播</a> 这个地址，页面没有大广告，列表清晰，选场次就行。偶尔遇到比赛较晚，我会提前打开放着当背景音。</p>
+            <p>如果你也是那种“只想看球、不想折腾”的人，这个节奏应该很熟悉。</p>
+        </div>
+
+        <!-- 第三部分 FAQ摘要 + 引用提示 -->
+        <div class="card">
+            <h2>常见的小问题</h2>
+            <div class="faq-item">
+                <div class="faq-q">手机和电脑都能用吗？</div>
+                <div class="faq-a">都可以。我大部分时候用手机看，偶尔投屏到电视，体验差别不大。主要看网络状况。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">需要下载软件或注册吗？</div>
+                <div class="faq-a">不需要。直接打开网页就能选直播源，这点是我最喜欢的，省了很多步骤。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">如果地址变了怎么办？</div>
+                <div class="faq-a">目前一直稳定。我通常每两周会刷新一次收藏夹，确保链接有效。你也可以偶尔搜一下关键词，比如直接搜“<a href="https://hdplay-qq.com">NBA直播</a>”就能找到。</div>
+            </div>
+            <hr>
+            <p style="font-size:0.95rem; color:#2e5763;"><span style="background:#e0f2f5; padding:2px 10px; border-radius:20px;">💡</span> 说到底，工具只是工具。找到一个入口，然后忘掉它，专心看球就好。</p>
+        </div>
+
+        <!-- 访问句 (嵌入 a 标签) 自然放置 -->
+        <div class="visit-line">
+            ⚡ 如果你需要一个直接的起点，可以试试这个地址：<a href="https://hdplay-qq.com">NBA直播</a>
+        </div>
+
+        <!-- 结尾 + 克制收束 -->
+        <div class="card" style="background: #eef6f9; border-color: #cde0e8;">
+            <p style="margin-bottom: 0;">赛季还长，比赛一场接一场。希望这篇短文能帮你少花一点时间在找渠道上，多享受几次进球瞬间。如果你有自己的常用方式，那就更好了——按自己的节奏看球，本身就很好。</p>
+            <div class="small-meta">记录于某个比赛夜 · 纯粹看球笔记</div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
